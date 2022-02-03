@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
   const [producto, setProducto] = useState([])
 
   useEffect(() => {
-    const url = 'https://fakestoreapi.com/products/{itemId}'
+    const url = `https://fakestoreapi.com/products/${itemId}`
 
     fetch(url)
       .then((res) => res.json())
