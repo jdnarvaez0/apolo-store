@@ -12,8 +12,6 @@ const ItemDetailContainer = () => {
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
-        // json = json.filter((item) => item.id === itemId)
-        // let myProducto = json[0]
         setProducto(json)
         console.log(json)
       })
@@ -22,7 +20,7 @@ const ItemDetailContainer = () => {
   return (
     <>
       {itemId}
-      <ItemDetail producto={producto} />
+      <ItemDetail item={producto} />
     </>
   )
 }
