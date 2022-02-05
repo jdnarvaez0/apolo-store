@@ -1,6 +1,7 @@
 import ItemListContainer from './components/ItemListContainer.jsx'
 import Navbar from './components/Navbar.jsx'
-import Cart from './components/Cart'
+import Cart from './components/pages/Cart.jsx'
+import About from './components/pages/About.jsx'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path='/cart'>
             <Cart />
+          </Route>
+          <Route path='/about'>
+            <About />
           </Route>
         </Switch>
       </BrowserRouter>
