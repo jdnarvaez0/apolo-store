@@ -8,7 +8,7 @@ export default function ItemList({ productos }) {
           {productos.map((producto) => {
             return (
               <div key={producto.id}>
-                <Item item={producto} />
+                <Item producto={producto} />
               </div>
             )
           })}
