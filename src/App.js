@@ -1,9 +1,10 @@
 import ItemListContainer from './components/ItemListContainer'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Search from './components/Search'
 import Cart from './components/pages/Cart'
 import About from './components/pages/About'
 import ItemDetailContainer from './components/ItemDetailContainer'
-import Footer from './components/Footer'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path='/'>
+            <div className='m-14'>
+              <Search />
+            </div>
             <ItemListContainer />
           </Route>
           <Route path='/item/:itemId'>
