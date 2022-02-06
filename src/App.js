@@ -1,8 +1,9 @@
-import ItemListContainer from './components/ItemListContainer.jsx'
-import Navbar from './components/Navbar.jsx'
-import Cart from './components/pages/Cart.jsx'
-import About from './components/pages/About.jsx'
+import ItemListContainer from './components/ItemListContainer'
+import Navbar from './components/Navbar'
+import Cart from './components/pages/Cart'
+import About from './components/pages/About'
 import ItemDetailContainer from './components/ItemDetailContainer'
+import Footer from './components/Footer'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <About />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </>
   )
