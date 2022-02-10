@@ -4,7 +4,7 @@ const Item = ({ producto }) => {
     <>
       <div className='flex flex-col items-center justify-center max-w-sm m-4'>
         <div
-          className='w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg shadow-md'
+          className='w-full h-64 bg-cover'
           style={{ backgroundImage: `url(${producto.image})` }}
         />
         <div className='w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800'>

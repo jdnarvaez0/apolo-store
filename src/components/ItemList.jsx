@@ -3,7 +3,7 @@ import Item from './Item'
 export default function ItemList({ productos }) {
   return (
     <>
-      {productos.length > 0 ? (
+      {
         <div className='container flex flex-wrap ml-24'>
           {productos.map((producto) => {
             return (
@@ -13,9 +13,7 @@ export default function ItemList({ productos }) {
             )
           })}
         </div>
-      ) : (
-        <div>Cargando...</div>
-      )}
+      }
     </>
   )
 }
