@@ -4,12 +4,14 @@ import Footer from './components/Footer'
 import Search from './components/Search'
 import Cart from './components/pages/Cart'
 import About from './components/pages/About'
+import CartProvider from './contex/CartProvider'
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer'
 
 function App() {
   return (
     <>
+      <CartProvider>
         <BrowserRouter>
           <Navbar />
           <Switch>
@@ -28,14 +30,15 @@ function App() {
             <Route path='/about'>
               <About />
             </Route>
+            <Route path='/cat/:catId'>
+              <ItemListContainer />
+            </Route>
           </Switch>
           <Footer />
         </BrowserRouter>
-      </>
+      </CartProvider>
+    </>
   )
 }
-
-
-
 
 export default App

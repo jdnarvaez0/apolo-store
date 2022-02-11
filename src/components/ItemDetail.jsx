@@ -120,7 +120,7 @@ const ItemDetail = ({ item, onAdd, added }) => {
               </span>
               <div className='lg:w-4/5 mx-auto'>
                 {added ? (
-                  <Link to='/cart' className='ml-64 font-medium text-gray-900 lg:w-4/5 mx-auto' >Go to Cart</Link>
+                  <Link to='/cart' className='font-medium text-gray-900 lg:w-4/5 ' >Go to Cart</Link>
                 ) : (
                   <ItemCount stock={5} initial={1} onAdd={onAdd} />
                 )}
