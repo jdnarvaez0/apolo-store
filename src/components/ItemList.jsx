@@ -4,10 +4,10 @@ export default function ItemList({ productos }) {
   return (
     <>
       {
-        <div className='container flex flex-wrap ml-24'>
+        <div className='container flex flex-wrap justify-center ml-14 '>
           {productos.map((producto) => {
             return (
-              <div key={producto.id}>
+              <div className='m-2' key={producto.id}>
                 <Item producto={producto} />
               </div>
             )
