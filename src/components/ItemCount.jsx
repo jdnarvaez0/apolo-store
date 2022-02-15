@@ -13,32 +13,42 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <>
-      <div className='h-10 w-32 ml-68'>
-        <label className='w-full text-gray-700 text-sm font-semibold'></label>
-        <div className='ml-64 flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1'>
-          <button className=' bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none'>
-            <span
-              className='m-auto text-2xl font-thin'
-              onClick={disminuirContador}
+      <div className='mt-2 ml-72 '>
+        <div className='flex items-center mt-1'>
+          <button
+            onClick={aumentarContador}
+            className='text-gray-500 focus:outline-none focus:text-gray-600'
+          >
+            <svg
+              className='h-5 w-5'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
             >
-              −
-            </span>
+              <path d='M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+            </svg>
           </button>
-          <span className='focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center justify-center text-gray-700   '>
-            {contador}
-          </span>
-          <button className='bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer'>
-            <span
-              className='m-auto text-2xl font-thin'
-              onClick={aumentarContador}
+          <span className='text-gray-700 text-lg mx-2'>{contador}</span>
+          <button
+            onClick={disminuirContador}
+            className='text-gray-500 focus:outline-none focus:text-gray-600'
+          >
+            <svg
+              className='h-5 w-5'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
             >
-              +
-            </span>
+              <path d='M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+            </svg>
           </button>
         </div>
       </div>
-      <div className='mx-auto font-thin ml-60 flex justify-end'>
-        <button  onClick={() => onAdd(contador)}>
+      <div className='mx-auto font-thin flex justify-end'>
+        <button
+          className='relative w-fit h-fit px-2 py-1 text-sm border rounded border-black'
+          onClick={() => onAdd(contador)}
+        >
           Add to cart
         </button>
       </div>
