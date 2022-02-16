@@ -5,7 +5,11 @@ import CartItem from './CartItem'
 
 const Cart = () => {
   const { cart, clearCart } = useContext(cartContext)
-  console.log(cart)
+
+  const totalAPagar = cart.reduce(
+    (counter, item) => counter + item.precio * item.cantidad,
+    0
+  )
 
   return (
     <>
@@ -16,19 +20,21 @@ const Cart = () => {
         </div>
       ) : (
         <div className='  flex items-center justify-center style="background: #edf2f7;"'>
-          <div className='flex justify-center my-8  w-screen'>
+          <div className='flex justify-center my-4  w-screen'>
             <div className=' flex flex-col w-full p-8 border text-gray-800 bg-white shadow-lg pin-r pin-y md:w-4/5 lg:w-4/5'>
-              <div className='flex-1 border'>
+              <div className='flex-1 border p-4'>
                 <table className='w-full text-sm lg:text-base' cellspacing='0'>
                   <thead className='w-full'>
                     <tr className='h-12 uppercase'>
                       <th className='hidden md:table-cell '></th>
-                      <th className='text-left'>Product</th>
-                      <th className='lg:text-right text-left pl-5 lg:pl-0'>
-                        <span className='hidden lg:inline'>Quantity</span>
+                      <th className='text-center'>Producto</th>
+                      <th className='lg:text-left text-left pl-5 lg:pl-0'>
+                        <span className='hidden lg:inline'>Cantidad</span>
                       </th>
-                      <th className='hidden text-right md:table-cell'>price</th>
-                      <th className='text-right'>Total price</th>
+                      <th className='hidden text-center md:table-cell'>
+                        Precio
+                      </th>
+                      <th className='text-right'></th>
                     </tr>
                   </thead>
                   {cart.map((element) => (
