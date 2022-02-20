@@ -1,29 +1,43 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
-import Loader from './Loader'
+import { getFirestore } from '../firebase/index'
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([])
-  const [loading, setLoading] = useState(false)
-  const { catId } = useParams()
+  // const { catId } = useParams()
 
   useEffect(() => {
-    setLoading(true);
-    const URL = catId ? `https://fakestoreapi.com/products/category/${catId}` : 'https://fakestoreapi.com/products/';
+    const db = getFirestore()
 
-    fetch(URL)
-      .then((res) => res.json())
-      .then((json) => {
-        setProductos(json)
-        console.log(json)
+    const itemCollection = db.collection('items')
+    //.where('category', '==', 'adidas');
+
+    itemCollection
+      .get()
+      .then((querySnapShot) => {
+        if (querySnapShot.size === 0) {
+          console.log('no hay documentos con en ese query')
+          return
+        }
+
+        console.log('hay documentos')
+
+        //console.log(querySnapShot.docs);
+
+        setProductos(
+          querySnapShot.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() }
+          })
+        )
       })
-      .finally(() => setLoading(false))
-  }, [catId])
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
 
   return (
     <div className='flex flex-wrap container'>
-      {loading ? <Loader /> : <ItemList productos={productos} />}
+      <ItemList productos={productos} />
     </div>
   )
 }

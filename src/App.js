@@ -21,16 +21,16 @@ function App() {
               </div>
               <ItemListContainer />
             </Route>
-            <Route path="/item/:itemId">
+            <Route exact path="/item/:itemId">
               <ItemDetailContainer />
             </Route>
-            <Route path="/cart">
+            <Route exact path="/cart">
               <Cart />
             </Route>
-            <Route path="/about">
+            <Route exact path="/about">
               <About />
             </Route>
-            <Route path="/cat/:catId">
+            <Route exact path="/cat/:catId">
               <ItemListContainer />
             </Route>
           </Switch>

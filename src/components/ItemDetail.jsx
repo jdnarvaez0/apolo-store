@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({ item, onAdd, added }) => {
-  console.log(item)
   return (
     <section className='text-gray-600 body-font overflow-hidden'>
       <div className='container px-5 py-16 mx-auto'>

@@ -5,11 +5,13 @@ import CartItem from './CartItem'
 
 const Cart = () => {
   const { cart, clearCart } = useContext(cartContext)
-
-  const totalAPagar = cart.reduce(
-    (counter, item) => counter + item.precio * item.cantidad,
+  
+  console.log(cart)
+  const  totalAPagar = cart.reduce(
+    (counter, item) => counter + item.item.price * item.count,
     0
   )
+  console.log(totalAPagar)
 
   return (
     <>
@@ -23,7 +25,7 @@ const Cart = () => {
           <div className='flex justify-center my-4  w-screen'>
             <div className=' flex flex-col w-full p-8 border text-gray-800 bg-white shadow-lg pin-r pin-y md:w-4/5 lg:w-4/5'>
               <div className='flex-1 border p-4'>
-                <table className='w-full text-sm lg:text-base' cellspacing='0'>
+                <table className='w-full text-sm lg:text-base' >
                   <thead className='w-full'>
                     <tr className='h-12 uppercase'>
                       <th className='hidden md:table-cell '></th>
@@ -40,13 +42,14 @@ const Cart = () => {
                   {cart.map((element) => (
                     <CartItem key={element.item.id} prod={element} />
                   ))}
-                  <button onClick={() => clearCart()}>Clear Cart</button>
                 </table>
+                  <button onClick={() => clearCart()}>Clear Cart</button>
               </div>
             </div>
           </div>
         </div>
       )}
+      <p>{totalAPagar}</p>
     </>
   )
 }
