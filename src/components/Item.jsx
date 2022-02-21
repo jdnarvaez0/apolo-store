@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 const Item = ({ producto }) => {
   return (
     <>
-      <div className="w-full h-full flex flex-col items-center justify-center max-w-sm p-4 border">
+      <div className="w-full h-full flex flex-col items-center justify-center max-w-sm p-8 border">
         <div
-          className="flex w-full h-80 bg-cover m-4"
+          className="flex justify-center items-center w-full h-80 bg-cover m-10 ml-1"
           style={{ backgroundImage: `url(${producto.image})` }}
         />
-        <div className="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
+        <div className="w-56 -mt-4 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
           <h3 className="py-2 text-xs font-bold tracking-wide text-center text-gray-800 uppercase dark:text-white">
             {producto.title}
           </h3>
-          <div className="flex items-center justify-between px-3 py-2 bg-gray-200 dark:bg-gray-700">
+          <div className="flex items-center text-lg justify-between px-3 py-2 bg-gray-200 dark:bg-gray-700">
             <span className="font-bold text-gray-800 dark:text-gray-200">
               $ {producto.price}
             </span>

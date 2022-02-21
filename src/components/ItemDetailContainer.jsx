@@ -9,11 +9,9 @@ const ItemDetailContainer = () => {
   const { addToCart } = useContext(cartContext)
 
   useEffect(() => {
-
     const db = getFirestore()
     const itemCollection = db.collection('items')
-    const miItem = itemCollection.doc('mEbnailf3KFryh2pUu3V')
-
+    const miItem = itemCollection.doc('yHQm9pzQC1sxIiJPj37S')
     miItem
       .get()
       .then((doc) => {
@@ -29,7 +27,6 @@ const ItemDetailContainer = () => {
       })
   }, [])
 
-
   const onAdd = (count) => {
     console.log(`Agregaste ${producto.title}, cantidad: ${count}.`)
     addToCart(producto, count)
@@ -38,7 +35,11 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      <ItemDetail item={producto} onAdd={onAdd} added={added} />
+      {producto.length ? (
+        <h2>Loadin...</h2>
+      ) : (
+        <ItemDetail item={producto} onAdd={onAdd} added={added} />
+      )}
     </>
   )
 }

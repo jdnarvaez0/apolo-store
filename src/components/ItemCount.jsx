@@ -13,7 +13,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <>
-      <div className='mt-2 ml-72 '>
+      <div className='-mt-4 ml-64 '>
         <div className='flex items-center mt-1'>
           <button
             onClick={aumentarContador}
@@ -46,7 +46,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       </div>
       <div className='mx-auto font-thin flex justify-end'>
         <button
-          className='relative w-fit h-fit px-2 py-1 text-sm border rounded border-black'
+          className="mr-6 px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
           onClick={() => onAdd(contador)}
         >
           Add to cart

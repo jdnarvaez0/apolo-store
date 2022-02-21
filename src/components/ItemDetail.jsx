@@ -8,7 +8,7 @@ const ItemDetail = ({ item, onAdd, added }) => {
         <div className='lg:w-4/5 mx-auto flex flex-wrap'>
           <img
             alt='ecommerce'
-            className='lg:w-1/3 w-full lg:h-auto h-64 object-cover object-center rounded'
+            className='lg:w-1/3 w-full lg:h-auto  h-full object-center rounded'
             src={item.image}
           />
           <div className='lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 ml-auto '>
@@ -93,20 +93,19 @@ const ItemDetail = ({ item, onAdd, added }) => {
             <div className='flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5'>
               <div className='flex ml-1 items-center'>
                 <div className='relative'>
-                  <span className='absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center'>
-                                      </span>
+                  <span className='absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center'></span>
                 </div>
               </div>
             </div>
-            <div className='flex'>
+            <div className='flex '>
               <span className='title-font font-medium text-2xl text-gray-900'>
-                {item.price}
+               $ {item.price}
               </span>
-              <div className='lg:w-4/5 mx-auto'>
+              <div className='lg:w-4/5 mx-auto mt-2'>
                 {added ? (
                   <Link
                     to='/cart'
-                    className='relative w-fit h-fit px-2 py-1 text-md border rounded border-black ml-64'
+                    className=" ml-64 px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
                   >
                     Go to Cart
                   </Link>

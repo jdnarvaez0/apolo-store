@@ -37,7 +37,11 @@ const ItemListContainer = () => {
 
   return (
     <div className='flex flex-wrap container'>
-      <ItemList productos={productos} />
+      {productos.length ? (
+        <ItemList productos={productos} />
+      ) : (
+        <h2>Loadin...</h2>
+      )}
     </div>
   )
 }
