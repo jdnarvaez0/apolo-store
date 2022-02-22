@@ -7,7 +7,7 @@ const ItemDetail = ({ item, onAdd, added }) => {
       <div className='container px-5 py-16 mx-auto'>
         <div className='lg:w-4/5 mx-auto flex flex-wrap'>
           <img
-            alt='ecommerce'
+            alt={item.title}
             className='lg:w-1/3 w-full lg:h-auto  h-full object-center rounded'
             src={item.image}
           />
@@ -110,7 +110,7 @@ const ItemDetail = ({ item, onAdd, added }) => {
                     Go to Cart
                   </Link>
                 ) : (
-                  <ItemCount stock={5} initial={1} onAdd={onAdd} />
+                  <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                 )}
               </div>
             </div>

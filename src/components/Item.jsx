@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 const Item = ({ producto }) => {
   return (
     <>
-      <div className="w-full h-full flex flex-col items-center justify-center max-w-sm p-8 border">
+      <div className=" w-full h-full flex flex-col items-center justify-center max-w-md p-8 border">
         <div
-          className="flex justify-center items-center w-full h-80 bg-cover m-10 ml-1"
+          className="flex justify-center items-center w-full h-72 bg-cover m-8 ml-1"
           style={{ backgroundImage: `url(${producto.image})` }}
         />
         <div className="w-56 -mt-4 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">

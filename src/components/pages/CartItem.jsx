@@ -12,8 +12,8 @@ const CartItem = ({ prod }) => {
           <td className='pb-4 md:table-cell '>
             <img
               src={prod.item.image}
-              className='w-28 rounded'
-              alt='Thumbnail'
+              className='w-28 ml-8'
+              alt={prod.item.title}
             />
           </td>
           <td>
@@ -21,8 +21,8 @@ const CartItem = ({ prod }) => {
           </td>
           <td className='justify-center md:justify-end mt-6'>
             <div className='w-20 h-10 flex justify-center items-center'>
-              <div className='relative flex items-center w-8 h-8 text-base rounded-full text-white bg-red-500'>
-                <span className='p-3'>
+              <div className='relative flex items-center w-7 h-7 text-base rounded-full text-white bg-red-500'>
+                <span className='p-2'>
                   {prod.count}
                 </span>
               </div>
@@ -34,7 +34,7 @@ const CartItem = ({ prod }) => {
             </span>
           </td>
           <td className='text-right'>
-            <button className='px-4 py-2 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-white bg-red-500 hover:bg-red-600 active:bg-red-700 focus:ring-red-300' onClick={() => deleteItem(prod.item.id)}>
+            <button className='px-2 py-1 rounded-md text-sm font-medium border-0 focus:outline-none focus:ring transition text-white bg-red-500 hover:bg-red-600 active:bg-red-700 focus:ring-red-300' onClick={() => deleteItem(prod.item.id)}>
               X
             </button>
           </td>
