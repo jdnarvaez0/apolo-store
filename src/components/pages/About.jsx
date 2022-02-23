@@ -1,8 +1,9 @@
+import Form from '../Form'
 
 const About = () => {
   return (
     <div>
-      About
+      <Form />
     </div>
   )
 }

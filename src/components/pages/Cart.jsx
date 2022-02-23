@@ -1,10 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { cartContext } from '../../contex/CartProvider'
 import CartItem from './CartItem'
+import Form from '../Form'
 
 const Cart = () => {
   const { cart, clearCart } = useContext(cartContext)
+  const [openModal, setOpenModal] = useState(false)
 
   console.log(cart)
   const totalAPagar = cart.reduce(
@@ -16,7 +18,7 @@ const Cart = () => {
   return (
     <>
       {cart.length === 0 ? (
-        <div className='m-10 flex flex-col justify-center items-center'>
+        <div className='m-16 flex flex-col justify-center items-center'>
           <h1 className='text-3xl'>Empty Cart</h1>
           <Link
             className='m-4 px-2 py-2 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none'
@@ -70,7 +72,9 @@ const Cart = () => {
                 </button>
                 <button
                   className=' w-28 px-2 py-3 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none'
-                  onClick={() => clearCart()}
+                  onClick={() => {
+                    setOpenModal(true)
+                  }}
                 >
                   buy now
                 </button>
@@ -79,6 +83,7 @@ const Cart = () => {
           </div>
         </div>
       )}
+      {openModal && <Form />}
     </>
   )
 }

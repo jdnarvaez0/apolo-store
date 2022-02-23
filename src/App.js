@@ -34,7 +34,9 @@ function App() {
               <ItemListContainer />
             </Route>
           </Switch>
-          <Footer />
+          <div className="mt-48">
+            <Footer />
+          </div>
         </BrowserRouter>
       </CartProvider>
     </>
