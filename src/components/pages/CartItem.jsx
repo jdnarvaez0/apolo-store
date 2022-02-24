@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { cartContext } from '../../contex/CartProvider'
 
 const CartItem = ({ prod }) => {
-  console.log(prod)
   const { deleteItem } = useContext(cartContext)
 
   return (
