@@ -26,7 +26,7 @@ const About = () => {
               </span>
 
               <h1 className='text-2xl font-semibold text-gray-700 capitalize dark:text-white'>
-                Copy & paste components
+                Nuestra historia 
               </h1>
 
               <p className='text-gray-500 dark:text-gray-300'>
@@ -73,7 +73,7 @@ const About = () => {
               </span>
 
               <h1 className='text-2xl font-semibold text-gray-700 capitalize dark:text-white'>
-                Zero Configrations
+                Misión
               </h1>
 
               <p className='text-gray-500 dark:text-gray-300'>
@@ -118,7 +118,7 @@ const About = () => {
               </span>
 
               <h1 className='text-2xl font-semibold text-gray-700 capitalize dark:text-white'>
-                Simple & clean designs
+                Visión
               </h1>
 
               <p className='text-gray-500 dark:text-gray-300'>
@@ -127,7 +127,7 @@ const About = () => {
                 voluptatum eveniet
               </p>
 
-              <a
+              <Link
                 href='#'
                 className='flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-200 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500'
               >
@@ -144,7 +144,7 @@ const About = () => {
                     clip-rule='evenodd'
                   ></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
