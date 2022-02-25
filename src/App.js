@@ -16,7 +16,7 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/">
-              <div className="m-14">
+              <div className="m-9">
                 <Search />
               </div>
               <ItemListContainer />
