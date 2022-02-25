@@ -1,9 +1,8 @@
-# Apolo Store 
+
+<h1 align="center" > Apolo Store </h1>
 <p align="center">
   <img src="https://img.icons8.com/color/344/apollo.png" width="128" height="128" />
 </p>
-
-___
 
 La tienda **Apolo Store** es un E-commerce creado como entrega final del curso de React Js, brindado por [CoderHouse](https://www.coderhouse.com/).
 
@@ -11,7 +10,7 @@ La tienda **Apolo Store** es un E-commerce creado como entrega final del curso d
 1. Clone/Download the code and run either `yarn install` or `npm install`
 2. Run `yarn start` or `npm start`. The app should now work!
 
-### [Demo](https://tender-meninsky-d57f5d.netlify.app/)
+### [Demo](https://wonderful-goldberg-d06e6e.netlify.app/)
 
 >**ReactJs**   <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" width="16" height="16" />
 >
